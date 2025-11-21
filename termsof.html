@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #fdfbf7;
+            --bg-secondary: #f5f1e8;
+            --text-primary: #1a1614;
+            --text-secondary: #594e43;
+            --accent: #c17e4a;
+            --accent-light: #e8b896;
+            --border: #d4c9bb;
+            --shadow: rgba(89, 78, 67, 0.08);
+        }
+
+        .dark {
+            --bg-primary: #1a1614;
+            --bg-secondary: #242120;
+            --text-primary: #fdfbf7;
+            --text-secondary: #c4b8aa;
+            --accent: #e8b896;
+            --accent-light: #c17e4a;
+            --border: #3d3531;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border);
+            animation: slideDown 0.7s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .last-updated {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .intro {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        .intro p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        section:nth-child(1) { animation-delay: 0.1s; }
+        section:nth-child(2) { animation-delay: 0.2s; }
+        section:nth-child(3) { animation-delay: 0.3s; }
+        section:nth-child(4) { animation-delay: 0.4s; }
+        section:nth-child(5) { animation-delay: 0.5s; }
+        section:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            padding-left: 0.5rem;
+        }
+
+        ul li::marker {
+            color: var(--accent);
+        }
+
+        ol li::marker {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--border);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .contact-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .contact-link:hover {
+            color: var(--accent-light);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            header {
+                margin-bottom: 2.5rem;
+            }
+
+            h1 {
+                font-size: 2.25rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .intro {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Terms of Service</h1>
+            <p class="last-updated">Last Updated: January 15, 2025</p>
+        </header>
+
+        <div class="intro">
+            <p>Welcome! These Terms of Service ("Terms") govern your use of our services. By accessing or using our platform, you agree to be bound by these Terms. Please read them carefully.</p>
+        </div>
+
+        <main>
+            <section>
+                <h2>1. Acceptance of Terms</h2>
+                <p>By accessing and using this service, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+            </section>
+
+            <section>
+                <h2>2. Use License</h2>
+                <p>Permission is granted to temporarily access the materials on our platform for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+                <ul>
+                    <li>Modify or copy the materials</li>
+                    <li>Use the materials for any commercial purpose or for any public display</li>
+                    <li>Attempt to reverse engineer any software contained on our platform</li>
+                    <li>Remove any copyright or other proprietary notations from the materials</li>
+                    <li>Transfer the materials to another person or "mirror" the materials on any other server</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. User Accounts</h2>
+                <p>When you create an account with us, you must provide information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms.</p>
+
+                <h3>Account Security</h3>
+                <p>You are responsible for safeguarding the password that you use to access the service and for any activities or actions under your password. You agree not to disclose your password to any third party.</p>
+            </section>
+
+            <section>
+                <h2>4. Prohibited Uses</h2>
+                <p>You may use our service only for lawful purposes and in accordance with these Terms. You agree not to use the service:</p>
+                <ol>
+                    <li>In any way that violates any applicable national or international law or regulation</li>
+                    <li>To transmit, or procure the sending of, any advertising or promotional material without our prior written consent</li>
+                    <li>To impersonate or attempt to impersonate the Company, a Company employee, another user, or any other person or entity</li>
+                    <li>To engage in any other conduct that restricts or inhibits anyone's use or enjoyment of the service</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>5. Intellectual Property</h2>
+                <p>The service and its original content, features, and functionality are and will remain the exclusive property of our company and its licensors. The service is protected by copyright, trademark, and other laws of both the United States and foreign countries.</p>
+            </section>
+
+            <section>
+                <h2>6. Termination</h2>
+                <p>We may terminate or suspend your account and bar access to the service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.</p>
+            </section>
+
+            <section>
+                <h2>7. Limitation of Liability</h2>
+                <p>In no event shall our company, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses.</p>
+            </section>
+
+            <section>
+                <h2>8. Privacy Policy</h2>
+                <p>Your use of our service is also governed by our Privacy Policy. Please review our Privacy Policy, which also governs the site and informs users of our data collection practices.</p>
+            </section>
+
+            <section>
+                <h2>9. Changes to Terms</h2>
+                <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+            </section>
+
+            <section>
+                <h2>10. Contact Information</h2>
+                <p>If you have any questions about these Terms, please contact us at:</p>
+                <p><strong>Email:</strong> <a href="mailto:ellykibetr@gmail.com" class="contact-link">legal@diamond.com</a></p>
+            </section>
+            <nav>
+            <li><a href="index.html">Home</a></li>
+            </nav>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+        
+        </footer>
+    </div>
+
+    <script>
+        // Dark mode detection
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+</body>
+</html>
